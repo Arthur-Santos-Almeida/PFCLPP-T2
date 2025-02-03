@@ -298,7 +298,7 @@ int main(int argc, char *argv[]) {
     int SAMax = atoi(argv[3]); // Número máximo de iterações por temperatura
     float temperaturaInicial = atof(argv[4]); 
     float temperaturaCongelamento = atof(argv[5]);// Próxima a 0 (0.01, 0.001)
-    int kPerturbacoes = atoi(argv[6]); // Número de pontos que eu perturbo a posição do label
+    int kPerturbacoes = atoi(argv[6]); // Máxima porcentagem de pontos a qual poderão ser perturbados a posição do label
 
     /* Descomente as linhas abaixo para setar os parâmetros em código. Facilita a debugar o algoritmo. */
     // const char *instancia = "h2_w24_58_all";
