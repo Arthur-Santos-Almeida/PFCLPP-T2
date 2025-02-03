@@ -1,0 +1,186 @@
+> library("irace")
+> scenario <- readScenario(filename = "scenario.txt", scenario = defaultScenario())
+irace_main(scenario = scenario)
+# 2025-02-02 18:53:30 -03: Reading parameter file '/mnt/c/OCII/PFCLPP/T2/irace_guide/tuning/parameters.txt'.
+# 2025-02-02 18:53:31 -03: Initialization
+# Elitist race
+# Elitist new instances: 1
+# Elitist limit: 2
+# nbIterations: 4
+# minNbSurvival: 4
+# nbParameters: 5
+# seed: 1333195758
+# confidence level: 0.95
+# budget: 180
+# mu: 5
+# deterministic: FALSE
+
+# 2025-02-02 18:53:31 -03: Iteration 1 of 4
+# experimentsUsedSoFar: 0
+# remainingBudget: 180
+# currentBudget: 45
+# nbConfigurations: 7
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . All alive configurations are elite and nothing is discarded.
+
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|       Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+|x|          1|          7|          3|     607.0208440|          7|00:00:22|   NA|  NA|    NA|
+|x|          2|          7|          3|     309.6562555|         14|00:00:00|+0.00|0.50|0.4286|
+|x|          3|          7|          5|     900.8333530|         21|00:04:27|-0.02|0.32|0.5264|
+|x|          4|          7|          5|     833.9375117|         28|00:00:23|-0.17|0.12|0.7436|
+|=|          5|          7|          3|     1093.983365|         35|00:04:38|-0.11|0.11|0.7703|
+|=|          6|          7|          5|     909.7326513|         42|00:00:00|-0.06|0.11|0.7715|
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+Best-so-far configuration:           5    mean value:      909.7326513
+Description of the best-so-far configuration:
+  .ID. taxaResfriamento SAMax temperaturaInicial temperaturaCongelamento kPerturbacoes .PARENT.
+5    5           0.6069   847            56.1173                  0.0258             6       NA
+
+# 2025-02-02 19:03:25 -03: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+  taxaResfriamento SAMax temperaturaInicial temperaturaCongelamento kPerturbacoes
+5           0.6069   847            56.1173                  0.0258             6
+3           0.6682   734            18.9923                  0.0629            10
+7           0.9744   622            80.8673                  0.0010             3
+6           0.8519   396             6.6173                  0.0753             1
+# 2025-02-02 19:03:25 -03: Iteration 2 of 4
+# experimentsUsedSoFar: 42
+# remainingBudget: 138
+# currentBudget: 46
+# nbConfigurations: 10
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . All alive configurations are elite and nothing is discarded.
+
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|       Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+|x|          7|         10|         11|     586.7916810|         10|00:00:31|   NA|  NA|    NA|
+|x|          1|         10|         13|     584.4375160|         16|00:00:18|+0.49|0.75|0.3543|
+|x|          5|         10|         11|     1103.527811|         22|00:04:43|+0.30|0.53|0.6977|
+|x|          3|         10|         11|     1354.645873|         28|00:03:37|+0.27|0.45|0.7005|
+|=|          2|         10|         11|     1085.420865|         34|00:00:00|+0.20|0.36|0.7450|
+|=|          6|         10|         11|     906.2812767|         40|00:00:00|+0.06|0.22|0.8843|
+|=|          4|         10|         11|     861.3244283|         46|00:00:21|-0.01|0.13|0.9196|
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+Best-so-far configuration:          11    mean value:      861.3244283
+Description of the best-so-far configuration:
+   .ID. taxaResfriamento SAMax temperaturaInicial temperaturaCongelamento kPerturbacoes .PARENT.
+11   11           0.8319   708             42.816                  0.0855             2        6
+
+# 2025-02-02 19:12:59 -03: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+   taxaResfriamento SAMax temperaturaInicial temperaturaCongelamento kPerturbacoes
+11           0.8319   708            42.8160                  0.0855             2
+5            0.6069   847            56.1173                  0.0258             6
+9            0.7821   599            42.0137                  0.0737             5
+13           0.8374   878            57.1413                  0.0391             4
+# 2025-02-02 19:12:59 -03: Iteration 3 of 4
+# experimentsUsedSoFar: 88
+# remainingBudget: 92
+# currentBudget: 46
+# nbConfigurations: 9
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . All alive configurations are elite and nothing is discarded.
+
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|       Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+|x|          8|          9|         11|     2084.354200|          9|00:05:49|   NA|  NA|    NA|
+|x|          5|          9|         11|     2098.395879|         14|00:02:59|-0.27|0.37|1.2433|
+|x|          2|          9|         14|     1405.243089|         19|00:00:00|+0.00|0.33|0.8206|
+|x|          4|          9|         11|     1199.223982|         24|00:00:15|+0.08|0.31|0.7476|
+|=|          1|          9|         16|     1087.783349|         29|00:00:15|+0.01|0.21|0.8093|
+|=|          6|          9|         16|     908.1666798|         34|00:00:00|-0.04|0.13|0.9600|
+|=|          7|          9|         11|     857.9464484|         39|00:00:15|-0.06|0.09|0.9573|
+|=|          3|          9|         16|     1019.296890|         44|00:03:05|-0.07|0.06|0.9352|
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+Best-so-far configuration:          16    mean value:      1019.296890
+Description of the best-so-far configuration:
+   .ID. taxaResfriamento SAMax temperaturaInicial temperaturaCongelamento kPerturbacoes .PARENT.
+16   16           0.9294   585            70.8522                  0.0588             2       11
+
+# 2025-02-02 19:25:41 -03: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+   taxaResfriamento SAMax temperaturaInicial temperaturaCongelamento kPerturbacoes
+16           0.9294   585            70.8522                  0.0588             2
+11           0.8319   708            42.8160                  0.0855             2
+14           0.8680   775            44.1973                  0.0515             1
+18           0.5352   712            40.7347                  0.0557             5
+# 2025-02-02 19:25:41 -03: Iteration 4 of 4
+# experimentsUsedSoFar: 132
+# remainingBudget: 48
+# currentBudget: 48
+# nbConfigurations: 8
+# Markers:
+     x No test is performed.
+     c Configurations are discarded only due to capping.
+     - The test is performed and some configurations are discarded.
+     = The test is performed but no configuration is discarded.
+     ! The test is performed and configurations could be discarded but elite configurations are preserved.
+     . All alive configurations are elite and nothing is discarded.
+
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+| |   Instance|      Alive|       Best|       Mean best| Exp so far|  W time|  rho|KenW|  Qvar|
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+|x|          9|          8|         16|     6.166667000|          8|00:00:00|   NA|  NA|    NA|
+|x|          8|          8|         11|     1045.260434|         12|00:02:59|+0.00|0.50|0.4375|
+|x|          5|          8|         11|     1400.986141|         16|00:03:01|-0.43|0.05|0.7881|
+|x|          6|          8|         21|     1061.755234|         20|00:00:00|-0.23|0.08|0.7891|
+|=|          2|          8|         21|     850.7083544|         24|00:00:00|-0.06|0.15|0.7436|
+|=|          3|          8|         19|     1062.267382|         28|00:02:35|-0.10|0.08|0.8170|
+|=|          1|          8|         19|     995.4464491|         32|00:00:12|-0.06|0.09|0.8039|
+|=|          7|          8|         19|     946.6302290|         36|00:00:12|-0.09|0.05|0.8234|
+|=|          4|          8|         16|     906.7268648|         40|00:00:12|-0.06|0.05|0.8011|
+|=|         10|          8|         19|     878.8166841|         48|00:00:25|-0.04|0.07|0.7855|
++-+-----------+-----------+-----------+----------------+-----------+--------+-----+----+------+
+Best-so-far configuration:          19    mean value:      878.8166841
+Description of the best-so-far configuration:
+   .ID. taxaResfriamento SAMax temperaturaInicial temperaturaCongelamento kPerturbacoes .PARENT.
+19   19           0.7872   790            49.0872                  0.0914             1       11
+
+# 2025-02-02 19:35:24 -03: Elite configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+   taxaResfriamento SAMax temperaturaInicial temperaturaCongelamento kPerturbacoes
+19           0.7872   790            49.0872                  0.0914             1
+16           0.9294   585            70.8522                  0.0588             2
+22           0.8363   837            71.8386                  0.0934             4
+21           0.6479   834            63.7450                  0.0489             5
+# 2025-02-02 19:35:24 -03: Stopped because budget is exhausted
+# Iteration: 5
+# nbIterations: 4
+# experimentsUsedSoFar: 180
+# timeUsed: 0
+# remainingBudget: 0
+# currentBudget: 48
+# number of elites: 4
+# nbConfigurations: 8
+# Total CPU user time: 3.891, CPU sys time: 1.14, Wall-clock time: 2513.591
+# Best configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+   taxaResfriamento SAMax temperaturaInicial temperaturaCongelamento kPerturbacoes
+19           0.7872   790            49.0872                  0.0914             1
+16           0.9294   585            70.8522                  0.0588             2
+22           0.8363   837            71.8386                  0.0934             4
+21           0.6479   834            63.7450                  0.0489             5
+# Best configurations as commandlines (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+19 --taxaResfriamento0.7872 --SAMax790 --temperaturaInicial49.0872 --temperaturaCongelamento0.0914 --kPerturbacoes1
+16 --taxaResfriamento0.9294 --SAMax585 --temperaturaInicial70.8522 --temperaturaCongelamento0.0588 --kPerturbacoes2
+22 --taxaResfriamento0.8363 --SAMax837 --temperaturaInicial71.8386 --temperaturaCongelamento0.0934 --kPerturbacoes4
+21 --taxaResfriamento0.6479 --SAMax834 --temperaturaInicial63.745 --temperaturaCongelamento0.0489 --kPerturbacoes5
+
+
+# Testing of elite configurations: 1
+# Testing iteration configurations: FALSE
+# 2025-02-02 19:35:24 -03: No test instances, skip testing
