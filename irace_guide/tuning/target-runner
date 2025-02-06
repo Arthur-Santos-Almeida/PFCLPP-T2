@@ -52,8 +52,8 @@ fi
 # exit 1
 
 # These files are saved in execDir. Saving them in /tmp may be faster. 
-STDOUT=c${CONFIG_ID}-${INSTANCE_ID}-${SEED}.stdout
-STDERR=c${CONFIG_ID}-${INSTANCE_ID}-${SEED}.stderr
+STDOUT="/tmp/c${CONFIG_ID}-${INSTANCE_ID}-${SEED}.stdout"
+STDERR="/tmp/c${CONFIG_ID}-${INSTANCE_ID}-${SEED}.stderr"
 
 # # Otherwise, save the output to a file, and parse the result from it.  (If
 # # you wish to ignore segmentation faults you can use '{}' around the
