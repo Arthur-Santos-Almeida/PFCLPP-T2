@@ -31,6 +31,9 @@ shift 4 || error "Not enough parameters"
 CONFIG_PARAMS=$*
 # End of parsing
 
+# Salvando em um arquivo pra checar se as instâncias estão sendo passadas corretamente:
+# echo "$(date): Usando instância: $INSTANCE com parâmetros: ${CONFIG_PARAMS}" >> tuning.log
+
 ## Find our own location.
 # BINDIR=$(dirname "$(readlink -f "$(type -P $0 || echo $0)")")
 

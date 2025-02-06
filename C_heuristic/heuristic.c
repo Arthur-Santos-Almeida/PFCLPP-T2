@@ -230,7 +230,7 @@ void printa_solucao(int *solucao, int numPontos) {
     printf("\n");
 }
 
-double simmulated_annealing(float taxaResfriamento, int SAMax, float temperaturaInicial, float temperaturaCongelamento, int *solucao, int numConflitos, Conflito *conflitos, int numPontos, int kPerturbacoes) {
+double simmulated_annealing(float taxaResfriamento, int SAMaxCoeficiente, float tInicialCoeficiente, float temperaturaCongelamento, int *solucao, int numConflitos, Conflito *conflitos, int numPontos, int numLabels, int kPerturbacoes) {
     calc_FO(numConflitos, conflitos, solucao);
 
     int *solucaoMelhor = malloc(numPontos * sizeof(int));
@@ -238,7 +238,9 @@ double simmulated_annealing(float taxaResfriamento, int SAMax, float temperatura
     double FOMelhor = calc_FO(numConflitos, conflitos, solucaoMelhor);
 
     int iterT = 0;
-    int temperatura = temperaturaInicial;
+    int SAMax = numPontos * numLabels * SAMaxCoeficiente; // Pra que o SAMax acompanhe o tamanho do problema
+    float temperaturaInicial = numPontos * numLabels * tInicialCoeficiente; // Pra que a T0 acompanhe o tamanho do problema
+    float temperatura = temperaturaInicial;
     
     while( temperatura > temperaturaCongelamento ) {
 
@@ -295,16 +297,16 @@ int main(int argc, char *argv[]) {
     /* Parâmetros recebidos por argumento na linha de comando */
     const char *instancia = argv[1];
     float taxaResfriamento = atof(argv[2]);  // Entre 0 e 1
-    int SAMax = atoi(argv[3]); // Número máximo de iterações por temperatura
-    float temperaturaInicial = atof(argv[4]); 
+    int SAMaxCoeficiente = atoi(argv[3]); // Número máximo de iterações por temperatura
+    float tInicialCoeficiente = atof(argv[4]); 
     float temperaturaCongelamento = atof(argv[5]);// Próxima a 0 (0.01, 0.001)
     int kPerturbacoes = atoi(argv[6]); // Máxima porcentagem de pontos a qual poderão ser perturbados a posição do label
 
     /* Descomente as linhas abaixo para setar os parâmetros em código. Facilita a debugar o algoritmo. */
     // const char *instancia = "h2_w24_58_all";
     // float taxaResfriamento = 0.99;  // Entre 0 e 1
-    // int SAMax = 200; // Número máximo de iterações por temperatura
-    // float temperaturaInicial = 10; 
+    // int SAMaxCoeficiente = 200; // Número máximo de iterações por temperatura
+    // float tInicialCoeficiente = 10; 
     // float temperaturaCongelamento = 0.01;// Próxima a 0 (0.01, 0.001)
     // int kPerturbacoes = 50; // Máxima porcentagem de pontos a qual poderão ser perturbados a posição do label
 
@@ -319,7 +321,7 @@ int main(int argc, char *argv[]) {
     Conflito *conflitos = ler_coeficientes(numConflitosComRedundancia, caminho_arquivo, N, P);
     int numConflitos = remover_redundantes(conflitos, numConflitosComRedundancia);
     int *solucao = construtiva_aleatoria(N); 
-    double FO = simmulated_annealing(taxaResfriamento, SAMax, temperaturaInicial, temperaturaCongelamento, solucao, numConflitos, conflitos, N, kPerturbacoes);
+    double FO = simmulated_annealing(taxaResfriamento, SAMaxCoeficiente, tInicialCoeficiente, temperaturaCongelamento, solucao, numConflitos, conflitos, N, P, kPerturbacoes);
 
     // Fim do relógio
     clock_t end = clock();

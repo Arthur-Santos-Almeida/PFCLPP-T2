@@ -1,0 +1,24 @@
+Analisando o seu caso com 3 instâncias, sim, há alguns parâmetros que você pode ajustar no scenario.txt:
+
+1. `firstTest = 3`: Sim, faz total sentido! Como você tem 3 instâncias, é razoável fazer o primeiro teste de eliminação após avaliar todas elas.
+
+2. `blockSize = 3`: Também seria útil, já que você tem 3 instâncias. Isso garante que as eliminações só aconteçam após avaliar todas as instâncias.
+
+3. `deterministic = 1`: Se sua heurística sempre retorna o mesmo resultado para a mesma configuração em uma mesma instância, você pode ativar isso. Mas como você está usando Simulated Annealing, que é naturalmente estocástico, provavelmente deve manter como 0.
+
+4. `sampleInstances = 0`: Como você tem poucas instâncias, pode ser interessante usar elas sempre na mesma ordem ao invés de amostrar aleatoriamente.
+
+5. `minNbSurvival`: Você poderia definir um valor baixo (como 2 ou 3) já que tem poucas instâncias e isso permitiria uma eliminação mais agressiva de configurações ruins.
+
+Uma sugestão de configuração seria:
+```
+trainInstancesDir = "./Instances"
+trainInstancesFile = "./instances-list.txt"
+maxExperiments = 1500
+firstTest = 3
+blockSize = 3
+sampleInstances = 0
+minNbSurvival = 2
+```
+
+Quer que eu explique melhor a função de algum desses parâmetros?

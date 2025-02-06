@@ -27,8 +27,8 @@
 
 # 1:                    2:                          3:      4:                  5:
 # nome                  switch                      tipo    valores             condição
-taxaResfriamento        "--taxaResfriamento"        r       (0.975, 0.995)        
-SAMax                   "--SAMax"                   i       (500, 1500)         
-temperaturaInicial      "--temperaturaInicial"      r       (1.0, 100.0)      
-temperaturaCongelamento "--temperaturaCongelamento" r       (0.001, 0.01)       
+taxaResfriamento        "--taxaResfriamento"        r       (0.8, 0.995)        
+SAMaxCoeficiente        "--SAMaxCoeficiente"        i       (1, 10)         
+tZeroCoeficiente        "--tZeroCoeficiente"        r       (1.0, 10.0)      
+temperaturaCongelamento "--temperaturaCongelamento" r       (0.0099, 0.01)      
 kPerturbacoes           "--kPerturbacoes"           i       (1, 100)

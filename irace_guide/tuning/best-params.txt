@@ -1,26 +1,24 @@
-# 2025-02-02 22:57:04 -03: Stopped because budget is exhausted
-# Iteration: 5
-# nbIterations: 4
-# experimentsUsedSoFar: 180
-# timeUsed: 0
-# remainingBudget: 0
-# currentBudget: 48
-# number of elites: 4
-# nbConfigurations: 8
-# Total CPU user time: 4.042, CPU sys time: 0.97, Wall-clock time: 2315.342
 # Best configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
    taxaResfriamento SAMax temperaturaInicial temperaturaCongelamento kPerturbacoes
 14           0.9883  1218            69.3104                  0.0048            97
 15           0.9894  1257            79.8080                  0.0075            79
 18           0.9796  1226            66.9946                  0.0099             6
 20           0.9845  1030            60.6398                  0.0096            80
-# Best configurations as commandlines (first number is the configuration ID; listed from best to worst according to the sum of ranks):
-14 --taxaResfriamento0.9883 --SAMax1218 --temperaturaInicial69.3104 --temperaturaCongelamento0.0048 --kPerturbacoes97
-15 --taxaResfriamento0.9894 --SAMax1257 --temperaturaInicial79.808 --temperaturaCongelamento0.0075 --kPerturbacoes79
-18 --taxaResfriamento0.9796 --SAMax1226 --temperaturaInicial66.9946 --temperaturaCongelamento0.0099 --kPerturbacoes6
-20 --taxaResfriamento0.9845 --SAMax1030 --temperaturaInicial60.6398 --temperaturaCongelamento0.0096 --kPerturbacoes80
 
+# Best configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+   taxaResfriamento SAMax temperaturaInicial temperaturaCongelamento kPerturbacoes
+11           0.9916  1079            49.8750                  0.0083            97
+9            0.9833  1099            74.5784                  0.0024            36
+8            0.9825   500            85.8491                  0.0069            10
 
-# Testing of elite configurations: 1
-# Testing iteration configurations: FALSE
-# 2025-02-02 22:57:05 -03: No test instances, skip testing
+# Best configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+    taxaResfriamento SAMax temperaturaInicial temperaturaCongelamento kPerturbacoes
+203           0.9578  1497           124.2802                  0.0090             6
+196           0.8406  1423            83.0172                  0.0051             4
+199           0.9434  1582           117.6702                  0.0081            13
+200           0.9421  1519           125.1590                  0.0093             6
+
+# Best configurations (first number is the configuration ID; listed from best to worst according to the sum of ranks):
+   taxaResfriamento SAMax temperaturaInicial temperaturaCongelamento kPerturbacoes
+79           0.8794  1531            68.5509                  0.0045            65
+62           0.8866  1495            80.5291                  0.0048            72

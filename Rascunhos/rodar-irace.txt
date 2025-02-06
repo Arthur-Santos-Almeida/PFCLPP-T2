@@ -1,6 +1,5 @@
-Já no console do R:
+Após abrir um console do R no diretório certo:
 
 library("irace")
-setwd("./tuning")
 scenario <- readScenario(filename = "scenario.txt", scenario = defaultScenario())
 irace_main(scenario = scenario)
