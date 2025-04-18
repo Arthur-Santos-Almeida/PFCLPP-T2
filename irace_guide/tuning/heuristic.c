@@ -285,7 +285,7 @@ double simmulated_annealing(float taxaResfriamento, int SAMaxCoeficiente, float 
                         FOMelhor = FODepois;
 
                         // Comente a linha abaixo para calibrar os parâmetros pelo irace
-                        //printf("Tempo melhor FO: %f\n", ((clock() - start) / (double) CLOCKS_PER_SEC));
+                        // printf("Tempo melhor FO: %f\n", ((clock() - start) / (double) CLOCKS_PER_SEC));
                     }
                 }
                 else {
@@ -314,7 +314,7 @@ double simmulated_annealing(float taxaResfriamento, int SAMaxCoeficiente, float 
     double tempo_exec = (double)(end - start) / CLOCKS_PER_SEC;
 
     // Comente a linha abaixo para calibrar os parâmetros pelo irace
-    printf("Tempo execução: %f\n", ((clock() - start) / (double) CLOCKS_PER_SEC));
+    // printf("Tempo execução: %f\n", ((clock() - start) / (double) CLOCKS_PER_SEC));
 
     return FOMelhor;
 }
@@ -326,8 +326,6 @@ int main(int argc, char *argv[]) {
         printf("Uso: %s <instancia> <taxaResfriamento> <SAMax> <temperaturaInicial> <tCongelamento> <maxPcentPerturbacoes>\n", argv[0]);
         // return 1;
     }
-
-    int numberoHubs = argv[1];
 
     /* Parâmetros recebidos por argumento na linha de comando */
     const char *instancia = argv[1];
@@ -344,7 +342,7 @@ int main(int argc, char *argv[]) {
     // float tInicialCoeficiente = 10; 
     // float tCongelamento = 0.01;// Próxima a 0 (0.01, 0.001)
     // int maxPcentPerturbacoes = 50; // Máxima porcentagem de pontos a qual poderão ser perturbados a posição do label
-    int tempoExecucaoSeg = 300; // 300 segundos -> 5 minutos de execução
+    int tempoExecucaoSeg = 10; // 300 segundos -> 5 minutos de execução
     // TO-DO: Talvez incluir aqui o melhor global da instância em questão
 
     int N, P;

@@ -1,0 +1,16 @@
+1. 	Baixar wsl
+1.1	Baixar o Ubuntu
+2.	Rodar o Código descrito aqui: https://cran-r.c3sl.ufpr.br/
+2.1	sudo apt-get install r-base-core
+3.	install.packages("irace")
+3.1	"yes" pras duas perguntas
+4.	Vai em ~/.profile (~ é o diretório Ubuntu/home/seunomedeusuario), adiciona isso lá embaixo:
+
+	# Replace <IRACE_HOME> with the irace installation path
+	export IRACE_HOME=<IRACE_HOME>
+	export PATH=${IRACE_HOME}/bin/:$PATH
+	# Tell R where to find R_LIBS_USER
+	# Use the following line only if local installation was forced
+	export R_LIBS=${R_LIBS_USER}:${R_LIBS}
+5.	Roda irace --help do terminal (NÃO DO CONSOLE DO R) pra testar
+6.	Roda irace --init, isso vai criar os arquivos de configuração
